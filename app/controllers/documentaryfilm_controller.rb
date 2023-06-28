@@ -16,3 +16,8 @@ class DocumentaryfilmController < ApplicationController
       render:new
   end    
 end
+private
+def documentaryfilm_params
+      params.require(:documentaryfilm).permit(:name, :synopsis, :director)
+end
+end

@@ -18,4 +18,8 @@ class SerieController < ApplicationController
   else
       render:new
   end    
+private
+def serie_params
+      params.require(:serie).permit(:name, :synopsis, :director)
+end
 end
