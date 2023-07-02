@@ -1,16 +1,19 @@
 Rails.application.routes.draw do
-  get 'documentaryfilm/index'
-  get 'documentaryfilm/create'
-  get 'documentaryfilm/new'
-  get 'serie/index'
-  get 'serie/create'
-  get 'serie/new'
-  get 'movie/index'
-  get 'movie/create'
-  get 'movie/new'
+  get 'documentaryfilms/index'
+  get 'documentaryfilms/create'
+  get 'documentaryfilms/new'
+  get 'series/index'
+  get 'series/create'
+  get 'series/new'
+  get 'movies/index'
+  get 'movies/create'
+  get 'movies/new'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
-  post 'movie' =>'movie#create'
+  post "movies" =>"movies#create"
+  post "series" =>"series#create"
+  post "documentaryfilms" =>"documentaryfilms#create"
   # root "articles#index"
+
 end

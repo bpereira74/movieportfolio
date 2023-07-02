@@ -1,0 +1,18 @@
+<h1>Series#new</h1>
+<p>Find me in app/views/series/new.html.erb</p>
+
+<%= form_with model:@serie, method: :post do |form| %>
+<div>
+<%= form.label :name, "Enter movie name" %>
+<%= form.text_field :name %>
+</div>
+<div> 
+<%= form.label :synopsis, "Enter movie synopsis" %>
+<%= form.text_field :synopsis %>
+</div>
+<div>
+<%= form.label :director, "Enter movie director" %>
+<%= form.text_field :director %>
+</div>
+<%= form.submit  %>
+<% end %>

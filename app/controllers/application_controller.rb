@@ -1,3 +1,2 @@
-class ApplicationController < ActionController::Base
-      @post=Post.all
+class ApplicationController < ActionController::Base    
 end

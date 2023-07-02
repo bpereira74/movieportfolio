@@ -1,18 +1,18 @@
 require "test_helper"
 
-class MovieControllerTest < ActionDispatch::IntegrationTest
+class SeriesControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
-    get movie_index_url
+    get series_index_url
     assert_response :success
   end
 
   test "should get create" do
-    get movie_create_url
+    get series_create_url
     assert_response :success
   end
 
   test "should get new" do
-    get movie_new_url
+    get series_new_url
     assert_response :success
   end
 end
