@@ -1,24 +1,14 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Este es el proyecto movieportfolio. Es un proyecto realizado mediante modelos en postgres, que permitió poblar 3 tablas referenciales de Películas, Series y Documentales, mediante un seed.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
+* Ruby version :
+ruby "3.1.1"
 
 * Database creation
+Creada con Postgres y poblada con seed.rb
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* root a las bases:
+documentaryfilms/new
+movies/new
+series/new
