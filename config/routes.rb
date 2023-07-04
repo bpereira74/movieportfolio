@@ -15,5 +15,6 @@ Rails.application.routes.draw do
   post "series" =>"series#create"
   post "documentaryfilms" =>"documentaryfilms#create"
   # root "articles#index"
+  root "pages#index"
 
 end

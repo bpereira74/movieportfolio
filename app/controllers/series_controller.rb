@@ -3,8 +3,8 @@ class SeriesController < ApplicationController
   end
 
   def create
-      @serie=Serie.new(post_params)
-      if @post.save
+      @serie=Serie.new(serie_params)
+      if @serie.save
             redirect_to serie_index_path
       else
       render :new      
@@ -16,6 +16,6 @@ class SeriesController < ApplicationController
       @serie=Serie.new
   end
 
-  def series_params
-      params.require(:post).permit(:name, :synopsis, :director)
+  def serie_params
+      params.require(serie).permit(:name, :synopsis, :director)
   end

@@ -3,9 +3,9 @@ class DocumentaryfilmsController < ApplicationController
   end
 
   def create
-      @documentaryfilms=Documentaryfilm.new(post_params)
-      if @post.save
-            redirect_to Documentaryfilm_index_path
+      @documentaryfilm=Documentaryfilm.new(documentaryfilm_params)
+      if @documentaryfilm.save
+            redirect_to @documentaryfilm
       else
       render :new      
       end      
@@ -16,7 +16,7 @@ class DocumentaryfilmsController < ApplicationController
       @documentaryfilm=Documentaryfilm.new
   end
 
-  def movies_params
-      params.require(:post).permit(:name, :synopsis, :director)
+  def documentaryfilm_params
+      params.require(documentaryfilm).permit(:name, :synopsis, :director)
   end
 

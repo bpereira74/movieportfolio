@@ -1,11 +1,12 @@
 class MoviesController < ApplicationController
   def index
+      movie.all
   end
 
   def create
-      @movie=Movie.new(post_params)
-      if @post.save
-            redirect_to movie_index_path
+      @movie=Movie.new(movie_params)
+      if @movie.save
+            redirect_to @movie
       else
       render :new      
       end      
@@ -16,7 +17,7 @@ class MoviesController < ApplicationController
       @movie=Movie.new
   end
 
-  def movies_params
-      params.require(:post).permit(:name, :synopsis, :director)
+  def movie_params
+      params.require(movie).permit(:name,:synopsis, :director)
   end
 
