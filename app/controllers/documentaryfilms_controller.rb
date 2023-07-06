@@ -1,6 +1,7 @@
 class DocumentaryfilmsController < ApplicationController
   def index
-  end
+      @documentaryfilms=Documentaryfilm.all
+end
 
   def create
       @documentaryfilm=Documentaryfilm.new(documentaryfilm_params)
